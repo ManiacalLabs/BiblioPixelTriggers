@@ -2,6 +2,7 @@ from datetime import datetime
 from croniter import croniter
 from bibliopixel.remote import trigger
 import time
+import sys
 
 
 class crontab(trigger.TriggerBase):
@@ -24,3 +25,6 @@ class crontab(trigger.TriggerBase):
                     self.trigger(c['name'])
                     c['next'] = c['tab'].get_next(datetime)
             time.sleep(60 - datetime.now().second)
+
+
+sys.modules[__name__] = crontab

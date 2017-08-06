@@ -1,7 +1,9 @@
 from datetime import datetime
-from sunrise_sunset import SunriseSunset
+from . sunrise_sunset import SunriseSunset
 from bibliopixel.remote import trigger
 import time
+import sys
+
 
 VALID_OPTIONS = [
     'sunrise',
@@ -51,3 +53,6 @@ class solar(trigger.TriggerBase):
                 if self.today_times[t['config'].lower()] == now:
                     self.trigger(t['name'])
             time.sleep(60 - datetime.now().second)
+
+
+sys.modules[__name__] = solar

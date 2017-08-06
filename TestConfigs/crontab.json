@@ -1,0 +1,14 @@
+{
+    "typename": "BiblioPixelTriggers.crontab",
+    "events": [
+        {
+            "config": "*/2 * * * *",
+            "name": "Bloom"
+        },
+        {
+            "config": "1-59/2 * * * *",
+            "name": "OFF_ANIM"
+        }
+    ]
+
+}

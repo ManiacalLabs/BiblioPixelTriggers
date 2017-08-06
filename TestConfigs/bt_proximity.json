@@ -1,0 +1,37 @@
+{
+    "typename": "BiblioPixelTriggers.bt_proximity",
+    "check_interval": 10,
+    "lookup_timeout": 3,
+    "events": [
+        {
+            "address": "88:07:4B:37:92:DC",
+            "name": "Single_1_Connect"
+        },
+        {
+            "address": "88:07:4B:37:92:DC",
+            "state": false,
+            "name": "Single_1_Disconnect"
+        },
+        {
+            "address": "64:BC:0C:F8:74:94",
+            "name": "Single_2_Connect"
+        },
+        {
+            "address": ["88:07:4B:37:92:DC", "64:BC:0C:F8:74:94"],
+            "condition": "any",
+            "name": "Any_Connect"
+        },
+        {
+            "address": ["88:07:4B:37:92:DC", "64:BC:0C:F8:74:94"],
+            "condition": "any",
+            "state": false,
+            "name": "Any_Disconnect"
+        },
+        {
+            "address": ["88:07:4B:37:92:DC", "64:BC:0C:F8:74:94"],
+            "condition": "all",
+            "name": "Both_Connect"
+        }
+    ]
+
+}
