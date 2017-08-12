@@ -8,7 +8,7 @@ from sys import version_info as vi
 
 setup(
     name='BiblioPixelTriggers',
-    version="1.0.0",
+    version="1.0.1",
     description='BiblioPixel Remote UI Animation Triggers',
     author='Adam Haile',
     author_email='adam@maniacallabs.com',
