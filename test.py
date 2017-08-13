@@ -1,4 +1,4 @@
-from bibliopixel.util.importer import import_symbol
+import loady
 import sys
 import json
 import time
@@ -21,7 +21,7 @@ def run(config):
 
     typename = config.pop('typename')
     events = config.pop('events')
-    trigger = import_symbol(typename)
+    trigger = loady.code.load(typename)
 
     t = trigger(None, events, **config)
     t.trigger = fake_trigger
