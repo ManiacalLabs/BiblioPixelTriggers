@@ -1,8 +1,12 @@
 from datetime import datetime
 from . sunrise_sunset import SunriseSunset
-from bibliopixel.remote import trigger
 import time
 import sys
+
+try:
+    from bibliopixel.remote import trigger
+except ImportError:
+    from bibliopixel.animation.remote import trigger
 
 
 VALID_OPTIONS = [

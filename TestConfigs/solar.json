@@ -1,0 +1,16 @@
+{
+    "typename": "BiblioPixelTriggers.solar",
+    "lat": 35.684732,
+    "lon":-78.765541,
+    "events": [
+        {
+            "config": "sunset",
+            "name": "Blue"
+        },
+        {
+            "config": "sunrise",
+            "name": "OFF_ANIM"
+        }
+    ]
+
+}

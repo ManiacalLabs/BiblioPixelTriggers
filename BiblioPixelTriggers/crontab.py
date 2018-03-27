@@ -1,8 +1,12 @@
 from datetime import datetime
 from croniter import croniter
-from bibliopixel.remote import trigger
 import time
 import sys
+
+try:
+    from bibliopixel.remote import trigger
+except ImportError:
+    from bibliopixel.animation.remote import trigger
 
 
 class crontab(trigger.TriggerBase):

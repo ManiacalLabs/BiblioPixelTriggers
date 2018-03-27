@@ -1,10 +1,13 @@
 from datetime import datetime
 import bluetooth
 from bluetooth.btcommon import is_valid_address
-from bibliopixel.remote import trigger
 import time
 import sys
 
+try:
+    from bibliopixel.remote import trigger
+except ImportError:
+    from bibliopixel.animation.remote import trigger
 
 BASE_EVENT = {
     'state': True,
